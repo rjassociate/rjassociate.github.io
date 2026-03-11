@@ -36,7 +36,10 @@ font-weight:bold;
 
 .hero{
 height:50vh;
-background:url("hero.jpg") center/cover no-repeat;
+background-image:url("hero.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
