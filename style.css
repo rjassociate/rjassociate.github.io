@@ -13,7 +13,8 @@ border-bottom:4px solid orange;
 }
 
 header img{
-width:100px;
+width:180px;
+max-width:90%;
 }
 
 header h1{
@@ -34,7 +35,7 @@ font-weight:bold;
 }
 
 .hero{
-height:60vh;
+height:50vh;
 background:url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover;
 display:flex;
 flex-direction:column;
