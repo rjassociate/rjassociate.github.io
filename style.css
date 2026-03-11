@@ -36,11 +36,11 @@ font-weight:bold;
 
 .hero{
 height:50vh;
-background:url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover;
+background:url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
+position:relative;
 color:white;
 text-align:center;
 }
