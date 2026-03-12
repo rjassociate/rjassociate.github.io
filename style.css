@@ -13,8 +13,9 @@ border-bottom:4px solid orange;
 }
 
 header img{
-width:200px;
+width:220px;
 max-width:95%;
+margin-bottom:10px;
 }
 
 header h1{
@@ -55,14 +56,14 @@ padding:20px;
 }
 
 .hero h2{
+color:#ffffff !important;
 font-size:30px;
 margin-bottom:10px;
-color:white;
 }
 
 .hero p{
+color:#ffffff !important;
 font-size:16px;
-color:white;
 }
 
 .section{
