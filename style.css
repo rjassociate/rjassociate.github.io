@@ -1,25 +1,17 @@
 body{
-font-family:Arial;
 margin:0;
-background:#f4f4f4;
-scroll-behavior:smooth;
+font-family:Arial;
 }
 
 header{
 text-align:center;
 background:white;
-padding:20px;
+padding:15px;
 border-bottom:4px solid orange;
 }
 
 header img{
 width:220px;
-max-width:95%;
-margin-bottom:10px;
-}
-
-header h1{
-color:#0b3d91;
 }
 
 nav{
@@ -30,44 +22,81 @@ padding:12px;
 
 nav a{
 color:white;
-margin:15px;
+margin:10px;
 text-decoration:none;
-font-weight:bold;
 }
 
-.hero{height:50vh;background:url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") center/cover;background:url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:center;justify-content:center;position:relative;color:white;text-align:center;}
+/* HERO */
 
-/* Dark overlay for better text visibility */
+.hero{
+height:55vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background-size:cover;
+background-position:center;
+position:relative;
+color:white;
+text-align:center;
+transition:1s;
+}
 
 .hero::before{
 content:"";
 position:absolute;
-top:0;
-left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.45);
+background:rgba(0,0,0,0.5);
 }
 
 .hero-content{
 position:relative;
 z-index:1;
-padding:20px;
 }
 
 .hero h2{
-color:#ffffff !important;
 font-size:30px;
-margin-bottom:10px;
+text-shadow:0 3px 8px black;
 }
 
 .hero p{
-color:#ffffff !important;
-font-size:16px;
+text-shadow:0 3px 8px black;
 }
 
+/* CONTROLS */
+
+.controls button{
+background:white;
+border:none;
+padding:8px 12px;
+margin:5px;
+cursor:pointer;
+font-size:18px;
+border-radius:5px;
+}
+
+.dots{
+margin-top:10px;
+}
+
+.dot{
+height:8px;
+width:8px;
+background:#ccc;
+display:inline-block;
+border-radius:50%;
+margin:3px;
+cursor:pointer;
+}
+
+.dot.active{
+background:white;
+}
+
+/* SERVICES */
+
 .section{
-padding:60px 20px;
+padding:50px 20px;
 text-align:center;
 }
 
@@ -79,7 +108,7 @@ gap:20px;
 }
 
 .card{
-width:260px;
+width:250px;
 background:white;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
@@ -92,19 +121,21 @@ height:180px;
 object-fit:cover;
 }
 
+/* FOOTER */
+
 footer{
 background:#0b3d91;
 color:white;
-text-align:center;
 padding:15px;
+text-align:center;
 }
 
-/* Scroll Animation */
+/* SCROLL */
 
 .reveal{
 opacity:0;
 transform:translateY(40px);
-transition:all 1s ease;
+transition:1s;
 }
 
 .reveal.active{
