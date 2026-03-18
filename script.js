@@ -1,5 +1,3 @@
-/* SCROLL ANIMATION */
-
 window.addEventListener("scroll",function(){
 
 var reveals=document.querySelectorAll(".reveal");
@@ -21,9 +19,9 @@ reveals[i].classList.add("active");
 
 const heroImages = [
 "hero.jpg",
-"hero2.jpg",
-"hero3.jpg",
-"hero4.jpg"
+"https://images.unsplash.com/photo-1699187838163-e40139827cdb?w=1920&q=80",
+"https://images.unsplash.com/photo-1558691518-331f8672f840?w=1920&q=80",
+"https://images.unsplash.com/photo-1599995903128-531fc7fb694b?w=1920&q=80"
 ];
 
 let current = 0;
@@ -37,28 +35,19 @@ dots.forEach(d=>d.classList.remove("active"));
 dots[index].classList.add("active");
 }
 
-function nextSlide(){
-current=(current+1)%heroImages.length;
-showSlide(current);
-}
-
-function prevSlide(){
-current=(current-1+heroImages.length)%heroImages.length;
-showSlide(current);
-}
-
 function goToSlide(index){
 current=index;
 showSlide(current);
 }
 
 setInterval(()=>{
-nextSlide();
+current=(current+1)%heroImages.length;
+showSlide(current);
 },3000);
 
 showSlide(current);
 
-/* SERVICES IMAGE SLIDER */
+/* SERVICES SLIDER */
 
 const services = {
 
@@ -73,9 +62,9 @@ drain:[
 "drain-install":[
 "drain-laying.png",
 "drainl1.png",
-"drainl2.png",
-"drainl3.png",
-"drainl4.png"
+"drainl2.jpg",
+"drainl3.jpg",
+"drainl4.jpg"
 ],
 
 pqc:[
