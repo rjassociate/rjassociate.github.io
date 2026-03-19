@@ -16,7 +16,6 @@ reveals[i].classList.add("active");
 });
 
 /* HERO SLIDER */
-
 const heroImages = [
 "hero.jpg",
 "https://images.unsplash.com/photo-1699187838163-e40139827cdb?w=1920&q=80",
@@ -47,48 +46,27 @@ showSlide(current);
 
 showSlide(current);
 
-/* SERVICES SLIDER */
-
+/* SERVICES AUTO CHANGE */
 const services = {
 
 drain:[
-"drain-excavation.png",
-"draine1.jpg",
-"draine2.jpg",
-"draine3.jpg",
-"draine4.jpg"
+"drain-excavation.png","draine1.jpg","draine2.jpg","draine3.jpg","draine4.jpg"
 ],
 
 "drain-install":[
-"drain-laying.png",
-"drainl1.png",
-"drainl2.jpg",
-"drainl3.jpg",
-"drainl4.jpg"
+"drain-laying.png","drainl1.png","drainl2.jpg","drainl3.jpg","drainl4.jpg"
 ],
 
 pqc:[
-"concrete-paving.png",
-"pqc1.jpg",
-"pqc2.jpg",
-"pqc3.jpg",
-"pqc4.jpg"
+"concrete-paving.png","pqc1.jpg","pqc2.jpg","pqc3.jpg","pqc4.jpg"
 ],
 
 wall:[
-"retaining-wall.png",
-"wall1.jpg",
-"wall2.jpg",
-"wall3.jpg",
-"wall4.jpg"
+"retaining-wall.png","wall1.jpg","wall2.jpg","wall3.jpg","wall4.jpg"
 ],
 
 safety:[
-"site-safety.png",
-"safety1.jpg",
-"safety2.jpg",
-"safety3.jpg",
-"safety4.jpg"
+"site-safety.png","safety1.jpg","safety2.jpg","safety3.jpg","safety4.jpg"
 ]
 
 };
@@ -107,3 +85,29 @@ index=(index+1)%services[key].length;
 },3000);
 
 });
+
+/* GALLERY */
+let currentGallery=[];
+let currentIndex=0;
+
+function openGallery(type){
+currentGallery=services[type];
+currentIndex=0;
+
+document.getElementById("gallery").style.display="flex";
+document.getElementById("gallery-img").src=currentGallery[currentIndex];
+}
+
+function closeGallery(){
+document.getElementById("gallery").style.display="none";
+}
+
+function nextImg(){
+currentIndex=(currentIndex+1)%currentGallery.length;
+document.getElementById("gallery-img").src=currentGallery[currentIndex];
+}
+
+function prevImg(){
+currentIndex=(currentIndex-1+currentGallery.length)%currentGallery.length;
+document.getElementById("gallery-img").src=currentGallery[currentIndex];
+}
