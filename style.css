@@ -130,27 +130,53 @@ object-fit:cover;
 .gallery{
 display:none;
 position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.9);
+z-index:999;
+overflow-y:auto;
+}
+
+.gallery-images{
+display:flex;
+flex-wrap:wrap;
 justify-content:center;
 align-items:center;
-flex-direction:column;
-z-index:999;
+gap:20px;
+padding:50px 20px;
+min-height:100vh;
 }
 
 .gallery img{
 max-width:90%;
-max-height:70%;
+max-height:80vh;
+object-fit:contain;
+border-radius:5px;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
 }
 
 .close{
-position:absolute;
+position:fixed;
 top:20px;
-right:20px;
+right:30px;
 color:white;
-font-size:30px;
+font-size:40px;
 cursor:pointer;
+z-index:1000;
+background:rgba(0,0,0,0.5);
+border-radius:50%;
+width:50px;
+height:50px;
+display:flex;
+justify-content:center;
+align-items:center;
+transition:0.3s;
+}
+
+.close:hover{
+background:rgba(255,0,0,0.8);
 }
 
 /* WHATSAPP */
