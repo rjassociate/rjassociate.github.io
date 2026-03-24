@@ -87,27 +87,26 @@ index=(index+1)%services[key].length;
 });
 
 /* GALLERY */
-let currentGallery=[];
-let currentIndex=0;
-
 function openGallery(type){
-currentGallery=services[type];
-currentIndex=0;
+let galleryImagesContainer=document.getElementById("gallery-images");
+galleryImagesContainer.innerHTML="";
 
-document.getElementById("gallery").style.display="flex";
-document.getElementById("gallery-img").src=currentGallery[currentIndex];
+let selectedServices=services[type];
+selectedServices.forEach(imgSrc=>{
+let img=document.createElement("img");
+img.src=imgSrc;
+galleryImagesContainer.appendChild(img);
+});
+
+document.getElementById("gallery").style.display="block";
 }
 
 function closeGallery(){
 document.getElementById("gallery").style.display="none";
 }
 
-function nextImg(){
-currentIndex=(currentIndex+1)%currentGallery.length;
-document.getElementById("gallery-img").src=currentGallery[currentIndex];
+window.addEventListener("keydown",function(e){
+if(e.key==="Escape"){
+closeGallery();
 }
-
-function prevImg(){
-currentIndex=(currentIndex-1+currentGallery.length)%currentGallery.length;
-document.getElementById("gallery-img").src=currentGallery[currentIndex];
-}
+});
